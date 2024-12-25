@@ -1,73 +1,31 @@
-/* 定義全局樣式 */
-:root {
-    --primary-color: #4CAF50; /* 主色 */
-    --secondary-color: #333; /* 輔助色 */
-    --text-color: #fff; /* 白色文字 */
-    --bg-color: #f4f4f9; /* 背景色 */
-  }
-  
-  /* 全局設置 */
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--secondary-color);
-  }
-  
-  /* 導航欄樣式 */
-  nav {
-    background-color: var(--primary-color);
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* 居中導航欄 */
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 1rem;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #ffeb3b; /* 滑鼠懸停變黃色 */
-  }
-  
-  /* 頁面內容樣式 */
-  h1 {
-    text-align: center;
-    color: var(--primary-color);
-    margin-top: 2rem;
-  }
-  
-  p {
-    text-align: center;
-    line-height: 1.6;
-    max-width: 600px;
-    margin: 1rem auto;
-    color: var(--secondary-color);
-  }
-  
-  /* 響應式設計 */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column; /* 手機屏幕改為垂直導航 */
-      align-items: center;
-    }
-  
-    nav ul li {
-      margin: 0.5rem 0;
-    }
-  }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #00aaff;
+}
+
   

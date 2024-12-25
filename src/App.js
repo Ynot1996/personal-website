@@ -3,25 +3,26 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './pages/Contact'; // 新增 Contact 頁面的引入
+import Contact from './pages/Contact';
 import './styles/App.css';
 
 function App() {
   return (
     <Router>
-      <nav>
-        <ul>
+      {/* 修改導航欄 */}
+      <nav className="navbar">
+        <ul className="nav-links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="nav-link">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" className="nav-link">About</Link>
           </li>
           <li>
-            <Link to="/projects">Projects</Link>
+            <Link to="/projects" className="nav-link">Projects</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link> {/* 添加 Contact 的導航 */}
+            <Link to="/contact" className="nav-link">Contact</Link>
           </li>
         </ul>
       </nav>
@@ -29,10 +30,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} /> {/* 添加 Contact 路由 */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+

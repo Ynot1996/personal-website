@@ -1,0 +1,96 @@
+.hero {
+    height: 100vh;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+  }
+  
+  .hero-avatar {
+    flex: 1; /* 左側頭像區域佔 1/3 空間 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-avatar img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    flex: 2; /* 右側內容區域佔 2/3 空間 */
+    text-align: left; /* 靠左對齊文字 */
+  }
+  
+  .hero-intro {
+    font-size: 1.2rem;
+    color: #00aaff;
+  }
+  
+  .hero-name {
+    font-size: 4rem;
+    margin: 0.5rem 0;
+  }
+  
+  .hero-tagline {
+    font-size: 1.5rem;
+    color: #ccc;
+  }
+  
+  .social-icons {
+    margin-top: 1.5rem;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icons img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* 響應式設計 */
+@media (max-width: 768px) {
+    .hero {
+      flex-direction: column; /* 小螢幕下垂直排列 */
+      text-align: center; /* 居中對齊文字 */
+      padding: 2rem 1rem; /* 減少內邊距 */
+    }
+  
+    .hero-avatar {
+      margin-bottom: 1.5rem; /* 頭像和文字之間添加間距 */
+    }
+  
+    .hero-avatar img {
+      width: 200px; /* 減小頭像尺寸 */
+      height: 200px;
+    }
+  
+    .hero-content {
+      text-align: center; /* 文字居中對齊 */
+    }
+  
+    .hero-name {
+      font-size: 3rem; /* 減小名稱字體大小 */
+    }
+  
+    .hero-tagline {
+      font-size: 1.2rem; /* 減小標語字體大小 */
+    }
+  }
+  
