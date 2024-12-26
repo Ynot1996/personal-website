@@ -1,6 +1,6 @@
 .hero {
     height: 100vh;
-    background-color: #121212;
+    background-color: rgb(18, 18, 18);
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
@@ -42,10 +42,14 @@
   .hero-tagline {
     font-size: 1.5rem;
     color: #ccc;
+    text-align: left;
+    margin-left: 270px;
   }
   
   .social-icons {
     margin-top: 1.5rem;
+    text-align: left;
+    margin-left: 270px;
   }
   
   .social-icons a {
@@ -64,6 +68,34 @@
   
   .social-icons img:hover {
     transform: scale(1.1);
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .arrow-right {
+    right: 10px;
+  }
+  
+  .arrow img {
+    width: 20px;
+    height: 20px;
   }
   
   /* 響應式設計 */
@@ -95,4 +127,3 @@
       font-size: 1.2rem; /* 減小標語字體大小 */
     }
   }
-  
