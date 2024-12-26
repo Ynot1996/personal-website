@@ -1,12 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
+
 const Home = () => {
+  const navigate = useNavigate();
 
   // Function to handle arrow click
   const handleArrowClick = (direction) => {
     // Implement the logic to navigate between screens
-    console.log(`Navigate ${direction}`);
+    if (direction === 'right') {
+      navigate('./About');
+  };
   };
 
   return (
@@ -34,7 +39,7 @@ const Home = () => {
           <a href="https://github.com/Ynot1996" target="_blank" rel="noopener noreferrer">
             <img src="/icons/github.png" alt="GitHub" />
           </a>
-          <a href="" target="mailto:wen114teng@gmail.com" rel="noopener noreferrer">
+          <a href="mailto:wen114teng@gmail.com" target="_blank" rel="noopener noreferrer">
             <img src="/icons/gmail.png" alt="Gmail" />
           </a>
         </div>
@@ -45,4 +50,3 @@ const Home = () => {
 };
 
 export default Home;
-
