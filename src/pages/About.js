@@ -18,7 +18,7 @@ const About = () => {
 
     `嗨，我是 Tony Kang。
 
-    👨‍💻 專業專長
+    👨‍💻 專業技能
     我擅長前端開發（React）、後端開發（Node.js、Flask）、網路爬蟲及數據分析，並精通 Python、版本控制（Git）、雲端服務（AWS、GCP）、MySQL 等技術。同時，我正在積極學習其他語言與技術，包括 Java、C#、Docker、Kubernetes、AI（ML & DL） 等，持續拓展技術能力。
 
     🚀 技術旅程
