@@ -2,22 +2,37 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   z-index: 1000;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  margin-top: 3.5px;
+  margin-right: auto;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: 50px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
   margin: 0;
   padding: 0;
+  padding-right: 6rem;
 }
 
 .nav-link {
-  margin: 0 1rem;
+  margin: 0 2rem;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -27,5 +42,3 @@
 .nav-link:hover {
   color: #00aaff;
 }
-
-  

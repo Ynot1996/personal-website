@@ -9,8 +9,13 @@ import './styles/App.css';
 function App() {
   return (
     <Router>
-      {/* 修改導航欄 */}
+
       <nav className="navbar">
+
+        <Link to="/" className="nav-logo">
+          <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
+        </Link>
+
         <ul className="nav-links">
           <li>
             <Link to="/" className="nav-link">Home</Link>
@@ -22,16 +27,21 @@ function App() {
             <Link to="/projects" className="nav-link">Projects</Link>
           </li>
           <li>
+            <Link to="/skills" className="nav-link">Skills</Link>
+          </li>
+          <li>
             <Link to="/contact" className="nav-link">Contact</Link>
           </li>
         </ul>
       </nav>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
     </Router>
   );
 }

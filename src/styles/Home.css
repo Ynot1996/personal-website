@@ -1,129 +1,119 @@
 .hero {
-    height: 100vh;
-    background-color: rgb(18, 18, 18);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-  }
-  
-  .hero-avatar {
-    flex: 2; /* 左側頭像區域佔 2/7 空間 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hero-avatar img {
-    width: 350px;
-    height: 380px;
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .hero-content {
-    flex: 5; /* 右側內容區域佔 5/7 空間 */
-    text-align: center; 
-  }
-  
-  .hero-intro {
-    font-size: 1.5rem;
-    color: #00aaff;
-    text-align: left;
-    margin-left: 270px;
-  }
-  
-  .hero-name {
-    font-size: 6rem;
-    margin: -1.5rem 0;
-  }
-  
-  .hero-tagline {
-    font-size: 1.5rem;
-    color: #ccc;
-    text-align: left;
-    margin-left: 270px;
-  }
-  
-  .social-icons {
-    margin-top: 1.5rem;
-    text-align: left;
-    margin-left: 270px;
-  }
-  
-  .social-icons a {
-    display: inline-block;
-    margin-right: 1rem;
-    width: 40px;
-    height: 40px;
-  }
-  
-  .social-icons img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    transition: transform 0.3s;
-  }
-  
-  .social-icons img:hover {
-    transform: scale(1.1);
-  }
-  
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .arrow:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+  height: 100vh;
+  background-color: rgb(18, 18, 18);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-intro {
+  font-size: 1.5rem;
+  color: #00aaff;
+  text-align: left;
+}
+
+.hero-name {
+  font-size: 6rem;
+  margin: -1.5rem 0;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  color: #ccc;
+  text-align: left;
+}
+
+.social-icons {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.arrow-right {
+  right: 15px;
+}
+
+.arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    /* 小螢幕下垂直排列 */
+    text-align: center;
+    /* 居中對齊文字 */
+    padding: 2rem 1rem;
+    /* 減少內邊距 */
   }
 
-  .arrow-right {
-    right: 15px; 
+  .hero-avatar {
+    margin-bottom: 1.5rem;
+    /* 頭像和文字之間添加間距 */
   }
-  
-  .arrow img {
-    width: 20px;
-    height: 20px;
+
+  .hero-avatar img {
+    width: 200px;
+    /* 減小頭像尺寸 */
+    height: 200px;
   }
-  
-  /* 響應式設計 */
-@media (max-width: 768px) {
-    .hero {
-      flex-direction: column; /* 小螢幕下垂直排列 */
-      text-align: center; /* 居中對齊文字 */
-      padding: 2rem 1rem; /* 減少內邊距 */
-    }
-  
-    .hero-avatar {
-      margin-bottom: 1.5rem; /* 頭像和文字之間添加間距 */
-    }
-  
-    .hero-avatar img {
-      width: 200px; /* 減小頭像尺寸 */
-      height: 200px;
-    }
-  
-    .hero-content {
-      text-align: center; /* 文字居中對齊 */
-    }
-  
-    .hero-name {
-      font-size: 3rem; /* 減小名稱字體大小 */
-    }
-  
-    .hero-tagline {
-      font-size: 1.2rem; /* 減小標語字體大小 */
-    }
+
+  .hero-content {
+    text-align: center;
+    /* 文字居中對齊 */
   }
+
+  .hero-name {
+    font-size: 3rem;
+    /* 減小名稱字體大小 */
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+    /* 減小標語字體大小 */
+  }
+}

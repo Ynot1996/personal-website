@@ -11,7 +11,7 @@ const Home = () => {
     // Implement the logic to navigate between screens
     if (direction === 'right') {
       navigate('./About');
-  };
+    };
   };
 
   return (
@@ -20,11 +20,6 @@ const Home = () => {
       {/* 右箭頭 */}
       <div className="arrow arrow-right" onClick={() => handleArrowClick('right')}>
         <img src="/icons/right-arrow.png" alt="Right Arrow" />
-      </div>
-
-      {/* 左半(頭像) */}
-      <div className="hero-avatar">
-        <img src="/images/tony.jpeg" alt="Your Avatar" />
       </div>
 
       {/* 右半部 */}
