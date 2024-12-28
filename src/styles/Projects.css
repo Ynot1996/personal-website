@@ -1,0 +1,75 @@
+/* 整體容器樣式 */
+.projects-container {
+    padding: 20px;
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* 滑動區域 */
+.projects-slider {
+    display: flex;
+    overflow-x: hidden;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+}
+
+/* 單個專案卡片 */
+.project-card {
+    flex: 0 0 300px;
+    /* 固定卡片寬度 */
+    background: #2d3748;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+}
+
+/* 圖片樣式 */
+.project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* 專案內容 */
+.project-content {
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #cbd5e0;
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    background: #4a5568;
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
