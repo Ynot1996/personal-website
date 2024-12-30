@@ -1,7 +1,7 @@
 /* About.css */
 .hero {
     height: 100vh;
-    background-color: #121212;
+    background-color: #201d1d;
     color: #ffffff;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
 }
 
 .button {
-    background-color: #007bff;
+    background-color: #4a6a8a;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -47,7 +47,7 @@
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #2d5886;
 }
 
 .arrow {
@@ -56,7 +56,7 @@
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(228, 215, 215, 0.3);
     border-radius: 50%;
     display: flex;
     justify-content: center;

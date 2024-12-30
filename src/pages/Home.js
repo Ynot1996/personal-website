@@ -22,7 +22,6 @@ const Home = () => {
         <img src="/icons/right-arrow.png" alt="Right Arrow" />
       </div>
 
-      {/* 右半部 */}
       <div className="hero-content">
         <p className="hero-intro">Hello! I am</p>
         <h1 className="hero-name">TONY KANG</h1>

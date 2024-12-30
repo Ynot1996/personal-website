@@ -1,45 +1,61 @@
 import React from 'react';
-import '../styles/Projects.css'; // 將樣式單獨放在 CSS 文件中
+import '../styles/Projects.css';
 
 const Projects = () => {
   const projects = [
     {
       title: 'Stock Prediction Model',
 
-      description: `Stock analysis model using LSTM for time series forecasting to predict stock price movements. I was responsible for front-end (HTML, CSS, JavaScript) and back-end (Flask) development, deploying the application on AWS EC2.`,
+      description: `Stock analysis model using LSTM for time series forecasting to predict stock price movements. 
+      I was responsible for front-end (HTML, CSS, JavaScript) and back-end (Flask) development, deploying the application on AWS EC2.`,
 
       image: '/images/focused_group.png',
       tags: ['HTML & CSS', 'JavaScript', 'Flask', 'AWS', 'ML & DL', 'Web Scraping'],
+      link: 'https://github.com/Ynot1996/focusedgroup',
+    },
+    {
+      title: 'Little Turtle Hydration Reminder',
+      description: `A lightweight desktop widget featuring an adorable baby turtle that reminds you to stay hydrated. Starting as an egg, the turtle grows and interacts with you as you log your water intake. 
+      This fun and visually engaging app encourages healthy hydration habits right on your desktop.`,
+      image: '/images/turtle.webp',
+      tags: ['HTML & CSS', 'Vue.js', 'Rust', 'SQLite', 'Canvas API'],
     },
     {
       title: 'Daliy Food Planning App',
-      description: '使用 Python 和 Pandas 開發的數據分析工具，可視化複雜數據。',
-      image: 'https://via.placeholder.com/300x180',
-      tags: ['Python', 'Pandas', 'Data Visualization'],
+      description: `A user-friendly application designed to assist individuals in planning their daily meals effectively.
+      This app aims to provide personalized nutrition recommendations, recipe suggestions, and a shopping list generator based on user preferences and dietary needs.`,
+      image: '/images/daily-app.webp',
+      tags: ['Swift', 'Node.js/Express', 'MongoDB', 'Docker & Kubernetes'],
     },
     {
-      title: 'Game',
-      description: '一個基於 React 的小型應用，展示了 Redux 的使用方法。',
-      image: 'https://via.placeholder.com/300x180',
-      tags: ['React', 'Redux', 'JavaScript'],
+      title: 'Coming Soon...',
+      description: ``,
+      image: '/images/coming-soon.jpg',
+      tags: ['', '', ''],
     },
     {
-      title: 'Game',
-      description: '一個基於 React 的小型應用，展示了 Redux 的使用方法。',
-      image: 'https://via.placeholder.com/300x180',
-      tags: ['React', 'Redux', 'JavaScript'],
+      title: 'Coming Soon...',
+      description: ``,
+      image: '/images/coming-soon.jpg',
+      tags: ['', '', ''],
     },
     {
-      title: 'Game',
-      description: '一個基於 React 的小型應用，展示了 Redux 的使用方法。',
-      image: 'https://via.placeholder.com/300x180',
-      tags: ['React', 'Redux', 'JavaScript'],
+      title: 'Coming Soon...',
+      description: ``,
+      image: '/images/coming-soon.jpg',
+      tags: ['', '', ''],
     },
     {
-      title: 'Game',
-      description: '一個基於 React 的小型應用，展示了 Redux 的使用方法。',
-      image: 'https://via.placeholder.com/300x180',
-      tags: ['React', 'Redux', 'JavaScript'],
+      title: 'Coming Soon...',
+      description: ``,
+      image: '/images/coming-soon.jpg',
+      tags: ['', '', ''],
+    },
+    {
+      title: 'Coming Soon...',
+      description: ``,
+      image: '/images/coming-soon.jpg',
+      tags: ['', '', ''],
     },
   ];
 
@@ -53,14 +69,24 @@ const Projects = () => {
               alt={project.title}
               className="project-image"
             />
+
             <div className="project-content">
-              <h3 className="project-title">{project.title}</h3>
+
+              <h3 className="project-title">
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  {project.title}
+                </a>
+              </h3>
+
               <p className="project-description">{project.description}</p>
+
               <div className="project-tags">
-                {project.tags.map((tag, idx) => (
-                  <span key={idx}>{tag}</span>
-                ))}
+                {
+                  project.tags.map((tag, idx) => (
+                    <span key={idx}>{tag}</span>))
+                }
               </div>
+
             </div>
           </div>
         ))}
