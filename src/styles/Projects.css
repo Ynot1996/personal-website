@@ -1,70 +1,48 @@
 /* 整體容器樣式 */
 .projects-container {
-    padding-top: 80px;
-    /* 添加頂部內邊距，確保內容不會與導航欄重疊 */
-    padding-left: 10%;
-    padding-right: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* 占滿視窗高度 */
     overflow: hidden;
-    /* 禁止垂直滾動 */
-    background-color: #1e293b;
+    background-color: #121212;
     color: #ffffff;
     margin: 0;
-    /* 移除外邊距 */
     padding: 0;
-    /* 移除內邊距 */
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1rem;
-    margin-bottom: 20px;
 }
 
 /* 滑動區域 */
 .projects-slider {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
     width: 100%;
-    /* 占滿可用寬度 */
     overflow-x: auto;
-    /* 僅允許水平滾動 */
     height: calc(100vh - 150px);
-    /* 減去標題和內邊距的高度 */
     scroll-snap-type: x mandatory;
-    /* 水平滑動對齊 */
-    padding: 10px 0;
-    /* 適當的上下內邊距 */
+    padding: 10% 0;
 }
 
 /* 單個專案卡片 */
 .project-card {
-    flex: 0 0 calc(100% / 5);
-    /* 平均分配 5 個卡片 */
-    height: 80%;
-    /* 占滿父容器高度 */
+    flex: 0 0 calc(92% / 5);
+    height: 100%;
     background: #2d3748;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 2px solid #4a5568;
+    box-sizing: border-box;
 }
 
 /* 圖片樣式 */
 .project-image {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -73,16 +51,20 @@ p {
     padding: 10px;
     text-align: center;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .project-title {
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .project-description {
     font-size: 1rem;
-    margin-bottom: 10px;
+    min-height: 150px;
 }
 
 .project-tags {
@@ -90,6 +72,8 @@ p {
     gap: 5px;
     justify-content: center;
     flex-wrap: wrap;
+    overflow-y: auto;
+    margin-top: 20px;
 }
 
 .project-tags span {

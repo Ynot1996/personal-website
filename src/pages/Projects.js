@@ -4,10 +4,12 @@ import '../styles/Projects.css'; // 將樣式單獨放在 CSS 文件中
 const Projects = () => {
   const projects = [
     {
-      title: 'Focused group',
-      description: '這是一個基於 React 和 Node.js 的個人網站，展示了我的技能與項目。',
+      title: 'Stock Prediction Model',
+
+      description: `Stock analysis model using LSTM for time series forecasting to predict stock price movements. I was responsible for front-end (HTML, CSS, JavaScript) and back-end (Flask) development, deploying the application on AWS EC2.`,
+
       image: '/images/focused_group.png',
-      tags: ['HTML', 'CSS', 'javaScript'],
+      tags: ['HTML & CSS', 'JavaScript', 'Flask', 'AWS', 'ML & DL', 'Web Scraping'],
     },
     {
       title: 'Daliy Food Planning App',
@@ -43,7 +45,6 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h1>Projects</h1>
       <div className="projects-slider">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
