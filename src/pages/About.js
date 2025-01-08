@@ -46,10 +46,10 @@ const About = () => {
   const handleArrowClick = (direction) => {
     // Implement the logic to navigate between screens
     if (direction === 'right') {
-      navigate('/Projects');
+      navigate('/personal-website/Projects');
     };
     if (direction === 'left') {
-      navigate('/');
+      navigate('/personal-website');
     };
   };
 
@@ -58,14 +58,15 @@ const About = () => {
 
       {/* 左箭頭 */}
       <div className="arrow arrow-left" onClick={() => handleArrowClick('left')}>
-        <img src="/icons/left-arrow.png" alt="Left Arrow" />
+        <img src={`${process.env.PUBLIC_URL}/icons/left-arrow.png`} alt="Left Arrow" />
       </div>
 
       {/* 右箭頭 */}
       <div className="arrow arrow-right" onClick={() => handleArrowClick('right')}>
-        <img src="/icons/right-arrow.png" alt="Right Arrow" />
+        <img src={`${process.env.PUBLIC_URL}/icons/right-arrow.png`} alt="Right Arrow" />
       </div>
 
+      {/* Container */}
       <div className="about-container">
         <div className="button-container">
           <button className="button" onClick={handleLan}>{buttonText}</button>

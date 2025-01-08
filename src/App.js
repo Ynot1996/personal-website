@@ -12,34 +12,34 @@ function App() {
 
       <nav className="navbar">
 
-        <Link to="/" className="nav-logo">
+        <Link to="/personal-website" className="nav-logo">
           <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
         </Link>
 
         <ul className="nav-links">
           <li>
-            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/personal-website" className="nav-link">Home</Link>
           </li>
           <li>
-            <Link to="/about" className="nav-link">About</Link>
+            <Link to="/personal-website/about" className="nav-link">About</Link>
           </li>
           <li>
-            <Link to="/projects" className="nav-link">Projects</Link>
+            <Link to="/personal-website/projects" className="nav-link">Projects</Link>
           </li>
           <li>
-            <Link to="/skills" className="nav-link">Skills</Link>
+            <Link to="/personal-website/skills" className="nav-link">Skills</Link>
           </li>
           <li>
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/personal-website/contact" className="nav-link">Contact</Link>
           </li>
         </ul>
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/personal-website" element={<Home />} />
+        <Route path="/personal-website/about" element={<About />} />
+        <Route path="/personal-website/projects" element={<Projects />} />
+        <Route path="/personal-website/contact" element={<Contact />} />
       </Routes>
 
     </Router>

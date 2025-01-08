@@ -81,39 +81,69 @@
 }
 
 /* 響應式設計 */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    /* 小螢幕下垂直排列 */
-    text-align: center;
-    /* 居中對齊文字 */
-    padding: 2rem 1rem;
-    /* 減少內邊距 */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  html,
+  body {
+    height: 100%;
+    /* 確保內容高度覆蓋整個視窗 */
+    margin: 0;
+    overflow: hidden;
+    /* 禁止滾動 */
   }
 
-  .hero-avatar {
-    margin-bottom: 1.5rem;
-    /* 頭像和文字之間添加間距 */
-  }
-
-  .hero-avatar img {
-    width: 200px;
-    /* 減小頭像尺寸 */
-    height: 200px;
-  }
-
-  .hero-content {
-    text-align: center;
-    /* 文字居中對齊 */
+  .hero-intro {
+    font-size: 5vw;
   }
 
   .hero-name {
-    font-size: 3rem;
-    /* 減小名稱字體大小 */
+    font-size: 12vw;
   }
 
   .hero-tagline {
-    font-size: 1.2rem;
-    /* 減小標語字體大小 */
+    font-size: 4vw;
+  }
+
+  .social-icons img {
+    width: 5vw;
+  }
+
+  .arrow {
+    display: none !important;
+    /* 隱藏箭頭 */
+  }
+}
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    height: 100%;
+    /* 確保內容高度覆蓋整個視窗 */
+    margin: 0;
+    overflow: hidden;
+    /* 禁止滾動 */
+  }
+
+  .hero-intro {
+    font-size: 5vw;
+  }
+
+  .hero-name {
+    font-size: 15vw;
+  }
+
+  .hero-tagline {
+    font-size: 4vw;
+  }
+
+  .social-icons img {
+    width: 11vw;
+  }
+
+
+  .arrow {
+    display: none !important;
+    /* 隱藏箭頭 */
   }
 }
