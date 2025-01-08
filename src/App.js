@@ -17,22 +17,18 @@ function App() {
         </Link>
 
         <ul className="nav-links">
-          <li>
-            <Link to="/personal-website" className="nav-link">Home</Link>
-          </li>
-          <li>
-            <Link to="/personal-website/about" className="nav-link">About</Link>
-          </li>
-          <li>
-            <Link to="/personal-website/projects" className="nav-link">Projects</Link>
-          </li>
-          <li>
-            <Link to="/personal-website/skills" className="nav-link">Skills</Link>
-          </li>
-          <li>
-            <Link to="/personal-website/contact" className="nav-link">Contact</Link>
-          </li>
+          <li><Link to="/personal-website" className="nav-link">Home</Link></li>
+
+          <li><Link to="/personal-website/about" className="nav-link">About</Link></li>
+
+          <li><Link to="/personal-website/projects" className="nav-link">Projects</Link></li>
+
+          {/* 暫時隱藏 Skills */}
+          {/* <li><Link to="/personal-website/skills" className="nav-link">Skills</Link></li> */}
+
+          <li><Link to="/personal-website/contact" className="nav-link">Contact</Link></li>
         </ul>
+
       </nav>
 
       <Routes>
