@@ -4,7 +4,9 @@ exports.handleContactForm = (req, res) => {
     const { name, email, subject, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: {
             user: process.env.EMAIL,
             pass: process.env.PASSWORD
@@ -20,7 +22,7 @@ exports.handleContactForm = (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
+            console.error('Error sending email:', error);
             res.status(500).send('Failed to send email');
         } else {
             console.log('Email sent: ' + info.response);
