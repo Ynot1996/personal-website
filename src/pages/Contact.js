@@ -10,6 +10,30 @@ const Contact = () => {
   });
   const [successMessage, setSuccessMessage] = useState('');
 
+  const nodemailer = require('nodemailer');
+  const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD
+    }
+  });
+
+  const mailOptions = {
+    from: email || 'no-reply@yourdomain.com', // 用戶提供的 Email
+    to: 'wen114teng@gmail.com', // 收件人
+    subject: subject || 'No Subject', // 避免 subject 為空
+    text: `Name: ${name || 'Anonymous'}\nMessage: ${message}`
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  });
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
