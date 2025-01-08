@@ -61,7 +61,15 @@ const Contact = () => {
   };
 
   return (
+
     <div className="contact-container">
+      <div className="contact-header">
+        <h1 className="contact-title">Send me a message</h1>
+        <p className="contact-description">
+          If you have any questions, feel free to reach out using the form below:
+        </p>
+      </div>
+
       <form className="contact-form" onSubmit={handleSubmit}>
         {successMessage && <p className="success-message">{successMessage}</p>}
         <div className="input-group">
@@ -103,10 +111,13 @@ const Contact = () => {
             required
           ></textarea>
         </div>
+
         <button className="contact-submit">
           <i className="fas fa-paper-plane"></i> Submit
         </button>
+
       </form>
+
     </div>
   );
 };

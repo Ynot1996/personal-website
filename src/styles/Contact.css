@@ -10,18 +10,43 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
-    padding: 15px;
+    padding: 25px 15px;
+    gap: 40px;
+    /* 增加標題和表單之間的距離 */
+}
+
+.contact-header {
+    text-align: center;
+    /* 讓文字居中 */
+    max-width: 600px;
+    /* 可選：限制標題寬度，避免過長 */
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* 與描述保持距離 */
+    color: #f8f9fa;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #cfcfcf;
+    margin: 0;
+    /* 確保沒有額外的 margin 影響布局 */
 }
 
 .contact-form {
-    background-color: #222;
+    background-color: #282828;
     padding: 30px;
     border-radius: 10px;
     width: 100%;
     max-width: 600px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form input,
