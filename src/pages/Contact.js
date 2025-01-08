@@ -25,7 +25,7 @@ const Contact = () => {
     }
 
     // 發送 API 請求
-    fetch('http://localhost:5000/api/contact', {
+    fetch('https://contact-backend-hf7k.onrender.com/api/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
