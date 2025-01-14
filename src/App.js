@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -30,7 +30,7 @@ function App() {
         </div>
 
         {/* Navigation Links */}
-        <ul className="nav-links">
+        <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
           <li><Link to="/personal-website" className="nav-link">Home</Link></li>
           <li><Link to="/personal-website/about" className="nav-link">About</Link></li>
           <li><Link to="/personal-website/projects" className="nav-link">Projects</Link></li>

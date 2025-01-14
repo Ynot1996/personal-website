@@ -43,9 +43,8 @@
   color: #00aaff;
 }
 
-/* 漢堡菜單樣式 */
 .hamburger-menu {
-  display: none;
+  display: block;
   cursor: pointer;
   flex-direction: column;
   gap: 5px;
@@ -86,5 +85,12 @@
 
   .hamburger-menu {
     display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+    /* 大屏幕隱藏漢堡菜單 */
   }
 }
