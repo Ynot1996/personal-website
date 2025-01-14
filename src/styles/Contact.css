@@ -5,6 +5,7 @@ body {
     color: #fff;
 }
 
+/* 表單容器 */
 .contact-container {
     animation: fadeIn 1.5s ease-in-out;
     display: flex;
@@ -13,15 +14,18 @@ body {
     flex-direction: column;
     height: 100vh;
     padding: 25px 15px;
+    min-height: 100vh;
+    /* 適應小螢幕 */
     gap: 40px;
     /* 增加標題和表單之間的距離 */
 }
 
+/* 表單標題與描述 */
 .contact-header {
     text-align: center;
     /* 讓文字居中 */
-    max-width: 600px;
-    /* 可選：限制標題寬度，避免過長 */
+    max-width: 90%;
+    /* 限制標題寬度 */
 }
 
 .contact-title {
@@ -44,7 +48,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -161,5 +165,39 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* 媒體查詢 - 手機優化 */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 10px;
+    }
+
+    .contact-form {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+        /* 縮小字體 */
+        padding: 8px;
+    }
+
+    .contact-submit {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .contact-title {
+        font-size: 1.5rem;
+        /* 更小的標題字體 */
+    }
+
+    .contact-description {
+        font-size: 0.9rem;
+        /* 更小的描述字體 */
     }
 }
