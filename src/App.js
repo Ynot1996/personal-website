@@ -6,19 +6,29 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body, html {
+    overflow: hidden;
+  }
+`;
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/personal-website" element={<Home />} />
-        <Route path="/personal-website/about" element={<About />} />
-        <Route path="/personal-website/projects" element={<Projects />} />
-        <Route path="/personal-website/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+    <>
+      <GlobalStyle />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/personal-website" element={<Home />} />
+          <Route path="/personal-website/about" element={<About />} />
+          <Route path="/personal-website/projects" element={<Projects />} />
+          <Route path="/personal-website/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

@@ -1,25 +1,26 @@
 .hero {
-  height: 100vh;
   background-color: rgb(18, 18, 18);
   color: rgb(255, 255, 255);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 10%;
+  height: 100vh;
 }
 
 .hero-content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -100px;
 }
 
 .hero-intro {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #00aaff;
   text-align: left;
 }
 
 .hero-name {
-  font-size: 6rem;
+  font-size: 7rem;
   margin: -1.5rem 0;
 }
 
@@ -83,15 +84,6 @@
 /* 響應式設計 */
 @media (min-width: 768px) and (max-width: 1024px) {
 
-  html,
-  body {
-    height: 100%;
-    /* 確保內容高度覆蓋整個視窗 */
-    margin: 0;
-    overflow: hidden;
-    /* 禁止滾動 */
-  }
-
   .hero-intro {
     font-size: 5vw;
   }
@@ -110,19 +102,13 @@
 
   .arrow {
     display: none !important;
-    /* 隱藏箭頭 */
   }
 }
 
 @media (max-width: 768px) {
 
-  html,
-  body {
-    height: 100%;
-    /* 確保內容高度覆蓋整個視窗 */
-    margin: 0;
-    overflow: hidden;
-    /* 禁止滾動 */
+  .hero-content {
+    margin-top: -200px;
   }
 
   .hero-intro {
@@ -141,9 +127,7 @@
     width: 11vw;
   }
 
-
   .arrow {
     display: none !important;
-    /* 隱藏箭頭 */
   }
 }
