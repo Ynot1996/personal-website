@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+/* 暫時隱藏 NotFound (未來為404準備) */
+// import NotFound from './pages/NotFound';
 import './styles/App.css';
 
 function App() {
@@ -15,20 +17,17 @@ function App() {
 
   return (
     <Router>
-
       <nav className="navbar">
         {/* Logo */}
         <Link to="/personal-website" className="nav-logo">
           <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
         </Link>
-
         {/* Hamburger Menu */}
         <div className="hamburger-menu" onClick={toggleMobileMenu}>
           <div></div>
           <div></div>
           <div></div>
         </div>
-
         {/* Navigation Links */}
         <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
           <li><Link to="/personal-website" className="nav-link">Home</Link></li>
@@ -45,8 +44,9 @@ function App() {
         <Route path="/personal-website/about" element={<About />} />
         <Route path="/personal-website/projects" element={<Projects />} />
         <Route path="/personal-website/contact" element={<Contact />} />
+        {/* 暫時隱藏 NotFound (未來為404準備) */}
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-
     </Router>
   );
 }
