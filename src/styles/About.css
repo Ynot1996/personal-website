@@ -1,4 +1,3 @@
-/* About.css */
 .hero {
     height: 100vh;
     background-color: #201d1d;
@@ -16,6 +15,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    margin-bottom: 5rem;
     max-width: 800px;
 }
 
@@ -85,28 +85,40 @@
 /* 響應式設計 */
 @media (max-width: 768px) {
     .hero {
+        overflow-x: hidden;
+        overflow-y: scroll;
         flex-direction: column;
-        /* 小螢幕下垂直排列 */
         text-align: center;
-        /* 居中對齊文字 */
         padding: 2rem 1rem;
-        /* 減少內邊距 */
     }
 
     .about-header {
         font-size: 28px;
-        /* 減小標題字體大小 */
     }
 
     .about-text {
+        padding-top: 7rem;
+        width: 80%;
         font-size: 16px;
-        /* 減小文本字體大小 */
     }
 
     .button {
         padding: 8px 16px;
-        /* 減小按鈕內邊距 */
         font-size: 14px;
-        /* 減小按鈕字體大小 */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        padding: 0 5%;
+        margin-bottom: 10rem;
+    }
+
+    .about-container {
+        margin-bottom: 10rem;
+    }
+
+    .about-text {
+        font-size: 25px;
     }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 import '../styles/About.css';
 
 const About = () => {
@@ -44,17 +45,24 @@ const About = () => {
 
   // Function to handle arrow click
   const handleArrowClick = (direction) => {
-    // Implement the logic to navigate between screens
     if (direction === 'right') {
       navigate('/personal-website/Projects');
-    };
+    }
     if (direction === 'left') {
       navigate('/personal-website');
-    };
+    }
   };
 
+  // Swipe handlers
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1)),
+    onSwipedRight: () => setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1)),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  });
+
   return (
-    <div className="hero">
+    <div className="hero" {...handlers}>
 
       {/* 左箭頭 */}
       <div className="arrow arrow-left" onClick={() => handleArrowClick('left')}>
