@@ -117,3 +117,80 @@
     transform: scale(1.1);
     color: #ffffff;
 }
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .projects-container {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .projects-slider {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+    }
+
+    .project-card {
+        flex: 0 0 80%;
+        margin: 0 10%;
+        scroll-snap-align: center;
+        transform: scale(0.9);
+        height: 90%;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-container {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .projects-slider {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+        padding: 0 10px;
+    }
+
+    .project-card {
+        flex: 0 0 70%;
+        margin: 0 15%;
+        scroll-snap-align: center;
+        transform: scale(0.95);
+        height: 90%;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+
+    .project-content {
+        padding: 15px;
+    }
+
+    .project-title {
+        font-size: 3rem;
+    }
+
+    .project-description {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 40%;
+    }
+
+    .project-tags span {
+        font-size: 1.2rem;
+        margin-bottom: 10%;
+    }
+}
