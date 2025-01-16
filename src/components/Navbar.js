@@ -3,15 +3,9 @@ import { NavLink, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const media = {
-    mobile: '@media (max-width: 768px)',
+  mobile: '@media (max-width: 768px)',
+  tablet: '@media (min-width: 769px) and (max-width: 1024px)',
 };
-
-const HamburgerLineStyle = `
-  width: 25px;
-  height: 2px;
-  background-color: white;
-  border-radius: 2px;
-`;
 
 const Nav = styled.nav`
   width: 100%;
@@ -27,6 +21,10 @@ const Nav = styled.nav`
   ${media.mobile} {
     height: auto;
   }
+  
+  ${media.tablet} {
+    height: 60px;
+  }
 `;
 
 const NavLogo1 = styled(NavLink)`
@@ -38,7 +36,7 @@ const NavLogo2 = styled(NavLink)`
   display: none;
 
   ${media.mobile} {
-  display: block;
+    display: block;
 `;
 
 const LogoImg = styled.img`
@@ -55,6 +53,18 @@ const LogoImg = styled.img`
     width: 90px;
     }
   }
+
+  ${media.tablet} {
+    height: 60px;
+    width: 60px;
+  }
+`;
+
+const HamburgerLineStyle = `
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
 `;
 
 const NavLinks = styled.ul`
@@ -87,6 +97,10 @@ const NavLinks = styled.ul`
       transform: translateX(0); 
     }
   }
+
+  ${media.tablet} {
+    margin-left: 28rem;
+  }
 `;
 
 const NavLinkItem = styled.li`
@@ -94,6 +108,11 @@ const NavLinkItem = styled.li`
     margin: 1rem 0;
     font-size: 1rem;
     width: 100%;
+  }
+  
+  ${media.tablet} {
+    font-size: 1.5rem;
+    margin: -0.8rem;
   }
 `;
 
@@ -155,60 +174,60 @@ const HamburgerLineBottom = styled(HamburgerLine)`
 `;
 
 function Navbar() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
-    const handleNavLinkClick = (path) => {
-        if (location.pathname !== path) {
-            setIsMobileMenuOpen(false);
-        } else {
-            setIsMobileMenuOpen(false);
-        }
-    };
+  const handleNavLinkClick = (path) => {
+    if (location.pathname !== path) {
+      setIsMobileMenuOpen(false);
+    } else {
+      setIsMobileMenuOpen(false);
+    }
+  };
 
-    return (
-        <Nav>
-            <NavLogo1 to="/personal-website">
-                <LogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
-            </NavLogo1>
+  return (
+    <Nav>
+      <NavLogo1 to="/personal-website">
+        <LogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
+      </NavLogo1>
 
-            <HamburgerMenu onClick={toggleMobileMenu}>
-                <HamburgerLineTop isOpen={isMobileMenuOpen} />
-                <HamburgerLineMiddle isOpen={isMobileMenuOpen} />
-                <HamburgerLineBottom isOpen={isMobileMenuOpen} />
-            </HamburgerMenu>
+      <HamburgerMenu onClick={toggleMobileMenu}>
+        <HamburgerLineTop isOpen={isMobileMenuOpen} />
+        <HamburgerLineMiddle isOpen={isMobileMenuOpen} />
+        <HamburgerLineBottom isOpen={isMobileMenuOpen} />
+      </HamburgerMenu>
 
-            <NavLinks className={isMobileMenuOpen ? 'open' : ''}>
-                <NavLogo2 to="/personal-website" className={isMobileMenuOpen ? 'open' : ''}>
-                    <LogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" className={isMobileMenuOpen ? 'open' : ''} />
-                </NavLogo2>
-                <NavLinkItem>
-                    <StyledNavLink to="/personal-website" end className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website')}>
-                        Home
-                    </StyledNavLink>
-                </NavLinkItem>
-                <NavLinkItem>
-                    <StyledNavLink to="/personal-website/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website/about')}>
-                        About
-                    </StyledNavLink>
-                </NavLinkItem>
-                <NavLinkItem>
-                    <StyledNavLink to="/personal-website/projects" className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website/projects')}>
-                        Projects
-                    </StyledNavLink>
-                </NavLinkItem>
-                <NavLinkItem>
-                    <StyledNavLink to="/personal-website/contact" className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website/contact')}>
-                        Contact
-                    </StyledNavLink>
-                </NavLinkItem>
-            </NavLinks>
-        </Nav>
-    );
+      <NavLinks className={isMobileMenuOpen ? 'open' : ''}>
+        <NavLogo2 to="/personal-website" className={isMobileMenuOpen ? 'open' : ''} onClick={() => handleNavLinkClick('/personal-website')}>
+          <LogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" className={isMobileMenuOpen ? 'open' : ''} />
+        </NavLogo2>
+        <NavLinkItem>
+          <StyledNavLink to="/personal-website" end className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website')}>
+            Home
+          </StyledNavLink>
+        </NavLinkItem>
+        <NavLinkItem>
+          <StyledNavLink to="/personal-website/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website/about')}>
+            About
+          </StyledNavLink>
+        </NavLinkItem>
+        <NavLinkItem>
+          <StyledNavLink to="/personal-website/projects" className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website/projects')}>
+            Projects
+          </StyledNavLink>
+        </NavLinkItem>
+        <NavLinkItem>
+          <StyledNavLink to="/personal-website/contact" className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website/contact')}>
+            Contact
+          </StyledNavLink>
+        </NavLinkItem>
+      </NavLinks>
+    </Nav >
+  );
 }
 
 export default Navbar;
