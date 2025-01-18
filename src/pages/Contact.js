@@ -115,9 +115,7 @@ const Contact = () => {
         <button className="contact-submit">
           <i className="fas fa-paper-plane"></i> Submit
         </button>
-
       </form>
-
     </div>
   );
 };
