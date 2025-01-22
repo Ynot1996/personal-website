@@ -192,7 +192,7 @@ function Navbar() {
   return (
     <Nav>
       <NavLogo1 to="/personal-website">
-        <LogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" />
+        <LogoImg src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} alt="Logo" />
       </NavLogo1>
 
       <HamburgerMenu onClick={toggleMobileMenu}>
@@ -203,7 +203,7 @@ function Navbar() {
 
       <NavLinks className={isMobileMenuOpen ? 'open' : ''}>
         <NavLogo2 to="/personal-website" className={isMobileMenuOpen ? 'open' : ''} onClick={() => handleNavLinkClick('/personal-website')}>
-          <LogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Logo" className={isMobileMenuOpen ? 'open' : ''} />
+          <LogoImg src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} alt="Logo" className={isMobileMenuOpen ? 'open' : ''} />
         </NavLogo2>
         <NavLinkItem>
           <StyledNavLink to="/personal-website" end className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website')}>

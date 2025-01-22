@@ -66,12 +66,12 @@ const About = () => {
 
       {/* 左箭頭 */}
       <div className="arrow arrow-left" onClick={() => handleArrowClick('left')}>
-        <img src={`${process.env.PUBLIC_URL}/icons/left-arrow.png`} alt="Left Arrow" />
+        <img src={`${process.env.PUBLIC_URL}/assets/icons/left-arrow.png`} alt="Left Arrow" />
       </div>
 
       {/* 右箭頭 */}
       <div className="arrow arrow-right" onClick={() => handleArrowClick('right')}>
-        <img src={`${process.env.PUBLIC_URL}/icons/right-arrow.png`} alt="Right Arrow" />
+        <img src={`${process.env.PUBLIC_URL}/assets/icons/right-arrow.png`} alt="Right Arrow" />
       </div>
 
       {/* Container */}
