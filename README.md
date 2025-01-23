@@ -1,4 +1,4 @@
-# Personal Website
+# Tony's Personal Website
 
 This repository contains the source code for my personal website, built with React. This website serves as my online portfolio and a platform to showcase my skills and projects.
 
@@ -25,13 +25,13 @@ Seeking opportunities to contribute to innovative projects and expand my skills 
 This website offers the following features:
 
 *   **Responsive Design:** 📱 Built using CSS media queries and flexible layouts to ensure an optimal viewing experience on all devices, from desktops to tablets and smartphones.
-    ![Responsive Design Example](./assets/images/responsive1.png)(./assets/images/responsive2.png)(./assets/images/responsive3.png)
+    ![Responsive Design Example](./public/assets/images/responsive1.png)(./public/assets/images/responsive2.png)(./public/assets/images/responsive3.png)
 
 *   **Interactive Elements:** 🖱️ Engage with interactive components, such as the animated hamburger menu for navigation on mobile devices, smooth scrolling, and hover effects.
-    ![Hamburger Menu Example](./assets/images/menu1.png)(./assets/images/menu2.png)
+    ![Hamburger Menu Example](./public/assets/images/menu1.png)(./public/assets/images/menu2.png)
 
 *   **Contact Form:** ✉️ A fully functional contact form that validates user input and sends messages to my email address, powered by a Node.js backend.
-    ![Contact Form Example](./assets/images/contact.png)
+    ![Contact Form Example](./public/assets/images/contact.png)
 
 *   **Modern Technologies:** 🚀 Built using modern web technologies like React, Styled-Components, and React Router for a performant and maintainable website.
 
