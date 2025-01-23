@@ -11,7 +11,8 @@ This repository contains the source code for my personal website, built with Rea
 * **Front-end:** React, Styled-Components, React Router
 * **Back-end:** Node.js
 * **Deployment:** Render, GitHub Pages
-
+* **CI/CD:** GitHub Actions
+  
 ## Features
 
 This website offers the following features:
@@ -19,20 +20,14 @@ This website offers the following features:
 *   **Responsive Design:** 
 
 📱 Built using CSS media queries and flexible layouts to ensure an optimal viewing experience on all devices, from desktops to tablets and smartphones.
-    
-![Responsive Design 1](./public/assets/images/responsive_1.png)![Responsive Design 2](./public/assets/images/responsive_2.png)![Responsive Design 3](./public/assets/images/responsive_3.png)
 
 *   **Interactive Elements:** 
 
 🖱️ Engage with interactive components, such as the animated hamburger menu for navigation on mobile devices, smooth scrolling, and hover effects.
-    
-![Hamburger Menu 1](./public/assets/images/menu_1.png)![Hamburger Menu 2](./public/assets/images/menu_2.png)
 
 *   **Contact Form:** 
 
 ✉️ A fully functional contact form that validates user input and sends messages to my email address, powered by a Node.js backend.
-    
-![Contact Form](./public/assets/images/contact.png)
 
 *   **Modern Technologies:** 
 
@@ -69,23 +64,3 @@ To run this project locally, follow these steps:
 The website will be accessible at `http://localhost:3000` in your browser.
 
 **Note:** This project requires Node.js version 22.12.0 or higher.
-
-## Build & Deployment
-
-1.  **Build the project:**
-
-    ```bash
-    npm run build
-    ```
-
-    This will create an optimized production build in the `build` directory.
-
-2.  **Deployment:**
-    *   **GitHub Pages:** The website is deployed to GitHub Pages through a GitHub Actions workflow that automatically builds and deploys the `build` directory to the `gh-pages` branch.
-    *   **Render:** The backend (`contact-backend`) is deployed to Render.
-        *   **Environment Variables:**
-            *   `EMAIL_USER`: Your Gmail address used for sending emails.
-            *   `EMAIL_PASS`: Your Gmail App Password.
-            *   `EMAIL_RECEIVER`: Your email address where you want to receive the contact form submissions.
-
-            **Note:** To set up these environment variables in Render, go to your Render dashboard, select your service, navigate to the "Environment" tab, and add the variables there. **For security, remember to generate an App Password for your Gmail account instead of using your regular password.** You can create an App Password in your Google Account's security settings.
