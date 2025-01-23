@@ -4,7 +4,7 @@ This repository contains the source code for my personal website, built with Rea
 
 **Check out the live website: [https://ynot1996.github.io/personal-website/](https://ynot1996.github.io/personal-website/)**
 
-![Website Screenshot](/assets/images/cover.png)
+![Website Screenshot](./public/assets/images/cover.png)
 
 ## About Me
 
