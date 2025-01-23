@@ -6,14 +6,14 @@ This repository contains the source code for my personal website, built with Rea
 
 ![Website Screenshot](./public/assets/images/cover.png)
 
-## Technologies Used
+## 🖥 Technologies Used
 
 * **Front-end:** React, Styled-Components, React Router
 * **Back-end:** Node.js
 * **Deployment:** Render, GitHub Pages
 * **CI/CD:** GitHub Actions
   
-## Features
+## 🚩 Features
 
 This website offers the following features:
 
@@ -33,7 +33,7 @@ This website offers the following features:
 
 🚀 Built using modern web technologies like React, Styled-Components, and React Router for a performant and maintainable website.
 
-## Getting Started
+## 🛠 Getting Started
 
 To run this project locally, follow these steps:
 
