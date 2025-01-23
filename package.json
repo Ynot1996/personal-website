@@ -4,10 +4,11 @@
   "private": true,
   "homepage": "https://ynot1996.github.io/personal-website",
   "dependencies": {
+    "jest": "^29.7.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.1.1",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.28.2",
+    "react-scripts": "^5.0.1",
     "react-swipeable": "^7.0.2",
     "styled-components": "^6.1.14",
     "web-vitals": "^4.2.4"
@@ -40,6 +41,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
     "gh-pages": "^6.3.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }
