@@ -162,15 +162,15 @@ const HamburgerLine = styled.div`
 `;
 
 const HamburgerLineTop = styled(HamburgerLine)`
-  transform: ${({ isOpen }) => isOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'};
+  transform: ${({ $isOpen }) => $isOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'};
 `;
 
 const HamburgerLineMiddle = styled(HamburgerLine)`
-  opacity: ${({ isOpen }) => isOpen ? 0 : 1};
+  opacity: ${({ $isOpen }) => $isOpen ? 0 : 1};
 `;
 
 const HamburgerLineBottom = styled(HamburgerLine)`
-  transform: ${({ isOpen }) => isOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'};
+  transform: ${({ $isOpen }) => $isOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'};
 `;
 
 function Navbar() {
@@ -196,9 +196,9 @@ function Navbar() {
       </NavLogo1>
 
       <HamburgerMenu onClick={toggleMobileMenu}>
-        <HamburgerLineTop isOpen={isMobileMenuOpen} />
-        <HamburgerLineMiddle isOpen={isMobileMenuOpen} />
-        <HamburgerLineBottom isOpen={isMobileMenuOpen} />
+        <HamburgerLineTop $isOpen={isMobileMenuOpen} />
+        <HamburgerLineMiddle $isOpen={isMobileMenuOpen} />
+        <HamburgerLineBottom $isOpen={isMobileMenuOpen} />
       </HamburgerMenu>
 
       <NavLinks className={isMobileMenuOpen ? 'open' : ''}>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import GlobalStyle from './App'; // 假設 GlobalStyle 定義在 App 中
+import GlobalStyle from './App';
 
+// 測試 GlobalStyle 元件
 describe('GlobalStyle', () => {
   test('applies global styles correctly', () => {
     const { container } = render(
@@ -10,8 +11,6 @@ describe('GlobalStyle', () => {
         <div data-testid="test-element">Test</div>
       </>
     );
-
-    // 確保樣式正確應用
     expect(container.firstChild).toMatchSnapshot();
   });
 });
