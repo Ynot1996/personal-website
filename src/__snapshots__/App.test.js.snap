@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GlobalStyle applies global styles correctly 1`] = `
+<nav
+  class="sc-KXCwU bfqIkq"
+>
+  <a
+    class="sc-gyycJP lOWGQ"
+    href="/personal-website"
+  >
+    <img
+      alt="Logo"
+      class="sc-gaZyOd hwMeGZ"
+      src="/assets/images/logo.png"
+    />
+  </a>
+  <div
+    class="sc-kuACkN gDAsVo"
+  >
+    <div
+      class="sc-hWWBcw sc-jHbxoU fcfWZC dOAYdY"
+    />
+    <div
+      class="sc-hWWBcw sc-cGXZpB fcfWZC iyfwzc"
+    />
+    <div
+      class="sc-hWWBcw sc-jZCRgm fcfWZC eZmUKx"
+    />
+  </div>
+  <ul
+    class="sc-dDvxFM bgbFEa"
+  >
+    <a
+      class="sc-eaUbBy ebNQtv"
+      href="/personal-website"
+    >
+      <img
+        alt="Logo"
+        class="sc-gaZyOd hwMeGZ"
+        src="/assets/images/logo.png"
+      />
+    </a>
+    <li
+      class="sc-jqVXSH gpbNph"
+    >
+      <a
+        class="sc-gTrWKq gGkAYA ({
+            isActive
+          }) => isActive ? \\"active\\" : \\"\\""
+        href="/personal-website"
+      >
+        Home
+      </a>
+    </li>
+    <li
+      class="sc-jqVXSH gpbNph"
+    >
+      <a
+        class="sc-gTrWKq gGkAYA ({
+            isActive
+          }) => isActive ? \\"active\\" : \\"\\""
+        href="/personal-website/about"
+      >
+        About
+      </a>
+    </li>
+    <li
+      class="sc-jqVXSH gpbNph"
+    >
+      <a
+        class="sc-gTrWKq gGkAYA ({
+            isActive
+          }) => isActive ? \\"active\\" : \\"\\""
+        href="/personal-website/projects"
+      >
+        Projects
+      </a>
+    </li>
+    <li
+      class="sc-jqVXSH gpbNph"
+    >
+      <a
+        class="sc-gTrWKq gGkAYA ({
+            isActive
+          }) => isActive ? \\"active\\" : \\"\\""
+        href="/personal-website/contact"
+      >
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
