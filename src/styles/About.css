@@ -9,23 +9,6 @@
     text-align: center;
 }
 
-.about-container {
-    white-space: pre-line;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 5rem;
-    max-width: 800px;
-}
-
-.about-text {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: left;
-    margin-bottom: 30px;
-}
-
 .button-container {
     display: flex;
     justify-content: center;
@@ -82,14 +65,66 @@
     height: 20px;
 }
 
+.about-container {
+    position: relative;
+    white-space: pre-line;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    max-width: 800px;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.about-text {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.slide-left {
+    animation: slideLeft 0.7s ease-in-out;
+}
+
+.slide-right {
+    animation: slideRight 0.7s ease-in-out;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(20%) rotateY(-10deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-20%) rotateY(10deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
 /* 響應式設計 */
 @media (max-width: 768px) {
     .hero {
         overflow-x: hidden;
-        overflow-y: scroll;
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1rem;
+        overflow-y: auto;
+        text-align: top;
+        padding: 0 1%;
     }
 
     .about-header {

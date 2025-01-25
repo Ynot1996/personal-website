@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import '../styles/About.css';
 
 const About = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [buttonText, setButtonText] = useState('切換中文');
+  const [slideDirection, setSlideDirection] = useState('');
+  const navigate = useNavigate();
+
   const slides = [
     `Hi, I'm Tony Kang.
 
@@ -33,15 +38,11 @@ const About = () => {
     歡迎隨時通過 Email（wen114teng@gmail.com）或 LinkedIn 與我聯繫，期待與您交流，分享想法，並一起創造更多價值！`,
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [buttonText, setButtonText] = useState('切換中文');
-
+  // Function to handle language switch
   const handleLan = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     setButtonText((prev) => (prev === '切換中文' ? 'English' : '切換中文'));
   };
-
-  const navigate = useNavigate();
 
   // Function to handle arrow click
   const handleArrowClick = (direction) => {
@@ -53,13 +54,28 @@ const About = () => {
     }
   };
 
-  // Swipe handlers
+  // Swipe handlers; "can use navigate('route') instead to navigate to the next or previous page"
   const handlers = useSwipeable({
-    onSwipedLeft: () => setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1)),
-    onSwipedRight: () => setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1)),
+    onSwipedLeft: () => {
+      setSlideDirection('slide-left');
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+      setButtonText((prev) => (prev === '切換中文' ? 'English' : '切換中文'));
+    },
+    onSwipedRight: () => {
+      setSlideDirection('slide-right');
+      setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+      setButtonText((prev) => (prev === '切換中文' ? 'English' : '切換中文'));
+    },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSlideDirection('');
+    }, 500);
+    return () => clearTimeout(timer);
+  }, [slideDirection]);
 
   return (
     <div className="hero" {...handlers}>
@@ -75,7 +91,7 @@ const About = () => {
       </div>
 
       {/* Container */}
-      <div className="about-container">
+      <div className={`about-container ${slideDirection}`}>
         <div className="button-container">
           <button className="button" onClick={handleLan}>{buttonText}</button>
         </div>

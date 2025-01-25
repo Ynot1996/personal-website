@@ -77,7 +77,6 @@ const NavLinks = styled.ul`
   padding-right: 6rem;
 
   ${media.mobile} {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -87,13 +86,14 @@ const NavLinks = styled.ul`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    transform: translateX(-100%);
-    transition: transform 1s ease-in-out;
+    transform: translateX(-100%); // Hide the menu by default
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; // Add transition effect
     z-index: 999;
     padding-top: 1rem;
 
     &.open {
-      display: flex; 
+      opacity: 1;
       transform: translateX(0); 
     }
   }
@@ -161,14 +161,13 @@ const HamburgerLine = styled.div`
   ${HamburgerLineStyle}
 `;
 
+// The top and bottom lines of the hamburger menu are rotated to form an X shape when the menu is open.  
 const HamburgerLineTop = styled(HamburgerLine)`
   transform: ${({ $isOpen }) => $isOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none'};
 `;
-
 const HamburgerLineMiddle = styled(HamburgerLine)`
   opacity: ${({ $isOpen }) => $isOpen ? 0 : 1};
 `;
-
 const HamburgerLineBottom = styled(HamburgerLine)`
   transform: ${({ $isOpen }) => $isOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none'};
 `;
@@ -202,9 +201,11 @@ function Navbar() {
       </HamburgerMenu>
 
       <NavLinks className={isMobileMenuOpen ? 'open' : ''}>
+        {/* This is the secondary logo shown only in the mobile menu (Hamburger menu). It does not appear in the web version. */}
         <NavLogo2 to="/personal-website" className={isMobileMenuOpen ? 'open' : ''} onClick={() => handleNavLinkClick('/personal-website')}>
           <LogoImg src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} alt="Logo" className={isMobileMenuOpen ? 'open' : ''} />
         </NavLogo2>
+
         <NavLinkItem>
           <StyledNavLink to="/personal-website" end className={({ isActive }) => isActive ? "active" : ""} onClick={() => handleNavLinkClick('/personal-website')}>
             Home
