@@ -13,10 +13,10 @@ const About = () => {
     `Hi, I'm Tony Kang.
 
     👨‍💻 Professional Expertise
-    I specialize in frontend development (React), backend development (Node.js, Flask), web scraping, and data analysis. I am proficient in Python, version control (Git), cloud services (AWS, GCP), and MySQL. Additionally, I am actively learning other programming languages and technologies, including Java, C#, Docker, Kubernetes, and AI (ML & DL), continuously expanding my technical skills.
+    I specialize in frontend development (React), backend development (Node.js, Flask), web scraping, and data analysis. I am proficient in Python, version control (Git), cloud services (AWS, GCP), and MySQL. 
 
     🚀 Technical Journey
-    From data processing to system architecture, from developing stock prediction models to creating diet management systems, I am passionate about turning ideas into reality. I am currently optimizing several DIY projects, such as stock prediction models, small games, and application systems, honing my skills and enhancing user experiences through these initiatives.
+    From data processing to system architecture, from developing stock prediction models to creating diet management systems, I am passionate about turning ideas into reality. I am currently optimizing several DIY projects, such as stock prediction models, small games, and application systems.
 
     📬 How to Reach Me
     Feel free to reach out via email at wen114teng@gmail.com or connect with me on LinkedIn. I look forward to sharing ideas, exchanging thoughts, and creating more value together!
@@ -29,10 +29,6 @@ const About = () => {
 
     🚀 技術旅程
     從數據處理到系統架構，從開發股票預測模型到飲食管理系統，我熱衷於將想法變為現實。我正在優化多個 DIY 專案，如股票預測模型、小型遊戲與應用系統，並通過這些專案磨練技術和提升用戶體驗。
-
-    📈 代表專案 (部分專案開發中)
-    ·股票預測系統：利用 LSTM 模型構建了一個股票預測網頁應用，並部署在 AWS 上，幫助用戶預測市場趨勢。
-    ·飲食管理系統：設計了一個多功能應用，用於記錄與分析飲食習慣，並提供個性化建議。
 
     📬 如何聯繫我
     歡迎隨時通過 Email（wen114teng@gmail.com）或 LinkedIn 與我聯繫，期待與您交流，分享想法，並一起創造更多價值！`,

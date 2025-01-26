@@ -163,7 +163,8 @@ body {
 /* 媒體查詢 - 手機優化 */
 @media (max-width: 768px) {
     .contact-container {
-        padding: 10px;
+        overflow-y: auto;
+        padding-top: 70px;
     }
 
     .contact-form {
