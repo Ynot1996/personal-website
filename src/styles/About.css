@@ -127,14 +127,14 @@
         padding: 0 1%;
     }
 
-    .about-header {
-        font-size: 28px;
-    }
-
     .about-text {
         padding-top: 7rem;
         width: 80%;
         font-size: 16px;
+    }
+
+    .arrow {
+        display: none;
     }
 
     .button {
@@ -154,5 +154,13 @@
 
     .about-text {
         font-size: 25px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .button {
+        display: none;
     }
 }
