@@ -30,8 +30,8 @@ exports.handleContactForm = async (req, res) => {
             const userMailOptions = {
                 from: '"ynot1996" <no-reply@ynot1996.github.io>',
                 to: email,
-                subject: '感謝您的留言！',
-                text: `您好 ${name || ''}，\n\n感謝您與我們聯絡！我們已經收到您的留言，將會盡快回覆。\n\n此為系統自動發送的郵件，請勿回覆。\n\n\n您的留言內容：\n${message}`
+                subject: '已收留言的訊息！',
+                text: `您好 ${name || ''}，\n\n您的留言內容：\n${message}\n\n\n感謝您與我聯絡！我們已經收到您的留言，將會盡快回覆。\n\n此為系統自動發送的郵件，請勿回覆。`
             };
 
             let userInfo = await transporter.sendMail(userMailOptions);
