@@ -42,17 +42,20 @@ const Contact = () => {
 
       .then((data) => {
         console.log('Success:', data);
-        // 清空表單並顯示成功訊息
-        setSuccessMessage('感謝您的留言！我們已收到您的訊息。');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-        alert('Message sent successfully!');
+        if (data.message === 'Message received and email sent!') { // 根據你後端返回的 message 進行判斷
+          setSuccessMessage('感謝您的留言！我們已收到您的訊息。');
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+          });
+          alert('Message sent successfully!');
+        } else {
+          // 處理其他情況，例如後端返回錯誤訊息
+          alert('Failed to send message. Server responded with: ' + data.message);
+        }
       })
-
       .catch((error) => {
         console.error('Error:', error);
         alert('Failed to send message.');
