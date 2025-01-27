@@ -18,9 +18,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 檢查留言內容是否為空
+    // 檢查是否填寫留言內容
     if (!formData.message.trim()) {
-      alert('留言內容不能為空！');
+      alert('請填寫留言內容！');
       return;
     }
 
@@ -42,17 +42,20 @@ const Contact = () => {
 
       .then((data) => {
         console.log('Success:', data);
-        // 清空表單並顯示成功訊息
-        setSuccessMessage('感謝您的留言！我們已收到您的訊息。');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
-        });
-        alert('Message sent successfully!');
+        if (data.message === 'Message received and email sent!') { // 根據你後端返回的 message 進行判斷
+          setSuccessMessage('感謝您的留言！我們已收到您的訊息。');
+          setFormData({
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+          });
+          alert('Message sent successfully!');
+        } else {
+          // 處理其他情況，例如後端返回錯誤訊息
+          alert('Failed to send message. Server responded with: ' + data.message);
+        }
       })
-
       .catch((error) => {
         console.error('Error:', error);
         alert('Failed to send message.');
@@ -64,14 +67,19 @@ const Contact = () => {
 
     <div className="contact-container">
       <div className="contact-header">
-        <h1 className="contact-title">Send me a message</h1>
-        <p className="contact-description">
-          If you have any questions, feel free to reach out using the form below:
-        </p>
+        {successMessage ? (
+          <p className="success-message">{successMessage}</p>
+        ) : (
+          <>
+            <h1 className="contact-title">Send me a message</h1>
+            <p className="contact-description">
+              If you have any questions, feel free to reach out using the form below:
+            </p>
+          </>
+        )}
       </div>
 
       <form className="contact-form" onSubmit={handleSubmit}>
-        {successMessage && <p className="success-message">{successMessage}</p>}
         <div className="input-group">
           <i className="fas fa-user input-icon"></i>
           <input
