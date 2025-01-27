@@ -15,7 +15,7 @@ exports.handleContactForm = async (req, res) => {
 
     // send to wen114teng@gmail.com from no-reply
     const mailOptions = {
-        from: '"ynot1996" <no-reply@ynot1996.github.io>',
+        from: '"文騰" <no-reply@ynot1996.github.io>',
         to: 'wen114teng@gmail.com',
         subject: subject || 'No Subject',
         text: `Name: ${name || 'Anonymous'}\nEmail: ${email}\nMessage: ${message}`
@@ -28,7 +28,7 @@ exports.handleContactForm = async (req, res) => {
         // 發送確認信給用戶 (如果使用者有提供email)
         if (email) {
             const userMailOptions = {
-                from: '"ynot1996" <no-reply@ynot1996.github.io>',
+                from: '"文騰" <no-reply@ynot1996.github.io>',
                 to: email,
                 subject: '已收留言的訊息！',
                 text: `您好 ${name || ''}，\n\n您的留言內容：\n${message}\n\n\n感謝您與我聯絡！我們已經收到您的留言，將會盡快回覆。\n\n此為系統自動發送的郵件，請勿回覆。`
@@ -39,6 +39,7 @@ exports.handleContactForm = async (req, res) => {
         }
 
         res.status(200).json({ message: 'Message received and email sent!' });
+
     } catch (error) {
         console.error('Error sending email:', error);
         if (error.code === 'EAUTH') {

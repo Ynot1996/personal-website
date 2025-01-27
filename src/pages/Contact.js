@@ -18,9 +18,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // 檢查留言內容是否為空
+    // 檢查是否填寫留言內容
     if (!formData.message.trim()) {
-      alert('留言內容不能為空！');
+      alert('請填寫留言內容！');
       return;
     }
 
