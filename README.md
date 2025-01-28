@@ -8,8 +8,8 @@ This repository contains the source code for my personal website, built with Rea
 
 ## 🖥 Technologies Used
 
-* **Front-end:** React, Styled-Components, React Router
-* **Back-end:** Node.js
+* **Front-end:** React, Styled-Components, React Router, Jest, Web Vitals
+* **Back-end:** Node.js, Express.js
 * **Deployment:** Render, GitHub Pages
 * **CI/CD:** GitHub Actions
   
