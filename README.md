@@ -12,7 +12,7 @@ This repository contains the source code for my personal website, built with Rea
 * **Back-end:** Node.js, Express.js
 * **Deployment:** Render, GitHub Pages
 * **CI/CD:** GitHub Actions
-  
+
 ## 🚩 Features
 
 This website offers the following features:
@@ -35,11 +35,15 @@ This website offers the following features:
 
 ## 🛠 Getting Started
 
-## Prerequisites
+### Prerequisites
+
 Before you begin, ensure you have the following installed:
+
 - Git (to execute git commands)
 - Node.js (version 22.12.0 or higher)
 - npm (Node Package Manager - automatically installed with Node.js)
+
+### Installation & Setup
 
 To run this project locally, follow these steps:
 
@@ -68,3 +72,9 @@ To run this project locally, follow these steps:
     ```
 
 The website will be accessible at `http://localhost:3000` in your browser.
+
+### Note
+
+No additional backend setup is needed for local development as it uses the deployed backend service on Render. 
+
+
