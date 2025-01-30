@@ -35,9 +35,15 @@ This website offers the following features:
 
 ## 🛠 Getting Started
 
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- Git (to execute git commands)
+- Node.js (version 22.12.0 or higher)
+- npm (Node Package Manager - automatically installed with Node.js)
+
 To run this project locally, follow these steps:
 
-1.  **Clone the repository:** (Download Git first)
+1.  **Clone the repository:** 
 
     ```bash
     git clone https://github.com/Ynot1996/personal-website.git
@@ -49,7 +55,7 @@ To run this project locally, follow these steps:
     cd personal-website
     ```
 
-3.  **Install dependencies:** (Download Node.js)
+3.  **Install dependencies:** 
 
     ```bash
     npm install
@@ -62,5 +68,3 @@ To run this project locally, follow these steps:
     ```
 
 The website will be accessible at `http://localhost:3000` in your browser.
-
-**Note:** This project requires Node.js version 22.12.0 or higher.
