@@ -37,10 +37,10 @@ This website offers the following features:
 
 To run this project locally, follow these steps:
 
-1.  **Clone the repository:**
+1.  **Clone the repository:** (Download Git first)
 
     ```bash
-    git clone [https://github.com/Ynot1996/personal-website.git]
+    git clone https://github.com/Ynot1996/personal-website.git
     ```
 
 2.  **Navigate to the project directory:**
@@ -49,7 +49,7 @@ To run this project locally, follow these steps:
     cd personal-website
     ```
 
-3.  **Install dependencies:**
+3.  **Install dependencies:** (Download Node.js)
 
     ```bash
     npm install
