@@ -86,15 +86,16 @@ const NavLinks = styled.ul`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    transform: translateX(-100%); // Hide the menu by default
+    transform: translateX(-100%);
     opacity: 0;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; // Add transition effect
+    transition: transform 0.7s ease-in-out, opacity 0.5s ease-in-out,
     z-index: 999;
     padding-top: 1rem;
 
     &.open {
+      transform: translateX(0);
       opacity: 1;
-      transform: translateX(0); 
+      transition: transform 0.7s ease-in-out, opacity 0.1s;
     }
   }
 
