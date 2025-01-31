@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <>
+    <div className="App" style={{ overflow: 'visible' }}>
       <GlobalStyle />
       <Router
         future={{
@@ -34,7 +34,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

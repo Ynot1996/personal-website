@@ -4,60 +4,57 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    height: calc(100vh - 50px);
+    /* 留出底部空間給滾動條 */
     background-color: #201d1d;
     color: #ffffff;
     margin: 0;
     padding: 0;
+    position: relative;
+    /* 為了定位滾動條容器 */
 }
 
 /* 滑動區域 */
 .projects-slider {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     height: calc(100vh - 150px);
-    scroll-snap-type: x mandatory;
     padding: 10% 0;
-
-    /* Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: #666 #2c2f33;
-
-    /* IE/Edge */
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-
-    /* 讓滾動更順暢 */
-    scroll-behavior: smooth;
 }
 
-/* Webkit (Chrome/Safari) 滾動條樣式 */
+/* 固定在底部的滾動條容器 */
+.scroll-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #201d1d;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* 滾動條樣式 */
+.scroll-container::-webkit-scrollbar,
 .projects-slider::-webkit-scrollbar {
     height: 8px;
 }
 
+.scroll-container::-webkit-scrollbar-track,
 .projects-slider::-webkit-scrollbar-track {
     background: #2c2f33;
     border-radius: 4px;
 }
 
+.scroll-container::-webkit-scrollbar-thumb,
 .projects-slider::-webkit-scrollbar-thumb {
     background: #666;
     border-radius: 4px;
-}
-
-.projects-slider::-webkit-scrollbar-thumb:hover {
-    background: #888;
-}
-
-/* Edge 滾動條樣式 */
-@supports (-ms-overflow-style: none) {
-    .projects-slider {
-        -ms-overflow-style: auto;
-    }
 }
 
 /* 單個專案卡片 */

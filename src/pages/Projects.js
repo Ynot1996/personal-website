@@ -89,7 +89,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" style={{ overflow: 'visible' }}>
       <div className="projects-slider">
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
