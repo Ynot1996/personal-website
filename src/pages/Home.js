@@ -1,27 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  // Function to handle arrow click
-  const handleArrowClick = (direction) => {
-    // Implement the logic to navigate between screens
-    if (direction === 'right') {
-      navigate('./About');
-    };
-  };
-
   return (
     <div className="hero">
-
-      {/* 右箭頭 */}
-      <div className="arrow arrow-right" onClick={() => handleArrowClick('right')}>
-        <img src={`${process.env.PUBLIC_URL}/assets/icons/right-arrow.png`} alt="Right Arrow" />
-      </div>
-
       {/* Hero & Icons */}
       {/* {`${process.env.PUBLIC_URL}路徑`}是為了可以在GitHub Pages裡索引到正確路徑 */}
       <div className="hero-content">
@@ -41,7 +24,6 @@ const Home = () => {
           </a>
         </div>
       </div>
-
     </div>
   );
 };

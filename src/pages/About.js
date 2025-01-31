@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
 import '../styles/About.css';
 
@@ -7,7 +6,6 @@ const About = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [buttonText, setButtonText] = useState('切換中文');
   const [slideDirection, setSlideDirection] = useState('');
-  const navigate = useNavigate();
 
   const slides = [
     `Hi, I'm Tony Kang.
@@ -16,7 +14,7 @@ const About = () => {
     I specialize in frontend development (React), backend development (Node.js, Flask), web scraping, and data analysis. I am proficient in Python, version control (Git), cloud services (AWS, GCP), and MySQL. 
 
     🚀 Technical Journey
-    From data processing to system architecture, from developing stock prediction models to creating diet management systems, I am passionate about turning ideas into reality. I am currently optimizing several DIY projects, such as stock prediction models, small games, and application systems.
+    I am passionate about turning ideas into reality and currently optimizing several DIY projects, such as stock prediction models, small games, and application systems.
 
     📬 How to Reach Me
     Feel free to reach out via email at wen114teng@gmail.com or connect with me on LinkedIn. I look forward to sharing ideas, exchanging thoughts, and creating more value together!
@@ -38,16 +36,6 @@ const About = () => {
   const handleLan = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
     setButtonText((prev) => (prev === '切換中文' ? 'English' : '切換中文'));
-  };
-
-  // Function to handle arrow click
-  const handleArrowClick = (direction) => {
-    if (direction === 'right') {
-      navigate('/personal-website/Projects');
-    }
-    if (direction === 'left') {
-      navigate('/personal-website');
-    }
   };
 
   // Swipe handlers; "can use navigate('route') instead to navigate to the next or previous page"
@@ -75,17 +63,6 @@ const About = () => {
 
   return (
     <div className="hero" {...handlers}>
-
-      {/* 左箭頭 */}
-      <div className="arrow arrow-left" onClick={() => handleArrowClick('left')}>
-        <img src={`${process.env.PUBLIC_URL}/assets/icons/left-arrow.png`} alt="Left Arrow" />
-      </div>
-
-      {/* 右箭頭 */}
-      <div className="arrow arrow-right" onClick={() => handleArrowClick('right')}>
-        <img src={`${process.env.PUBLIC_URL}/assets/icons/right-arrow.png`} alt="Right Arrow" />
-      </div>
-
       {/* Container */}
       <div className={`about-container ${slideDirection}`}>
         <div className="button-container">
@@ -93,7 +70,6 @@ const About = () => {
         </div>
         <p className="about-text">{slides[currentSlide]}</p>
       </div>
-
     </div>
   );
 };

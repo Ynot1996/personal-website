@@ -43,15 +43,13 @@ const Projects = () => {
     },
     {
       title: 'Turtle Hydration Reminder',
-      description: truncateDescription(`A lightweight desktop widget featuring an adorable baby turtle that reminds you to stay hydrated. Starting as an egg, the turtle grows and interacts with you as you log your water intake. 
-      This fun and visually engaging app encourages healthy hydration habits right on your desktop.`),
+      description: truncateDescription(`A lightweight desktop widget featuring an adorable baby turtle that reminds you to stay hydrated. Starting as an egg, the turtle grows and interacts with you as you log your water intake.`),
       image: `${process.env.PUBLIC_URL}/assets/images/turtle.webp`,
       tags: ['HTML & CSS', 'Vue.js', 'Rust', 'SQLite', 'Canvas API'],
     },
     {
       title: 'Daliy Food Planning App',
-      description: truncateDescription(`A user-friendly application designed to assist individuals in planning their daily meals effectively.
-      This app aims to provide personalized nutrition recommendations, recipe suggestions, and a shopping list generator based on user preferences and dietary needs.`),
+      description: truncateDescription(`A user-friendly application aims to provide personalized nutrition recommendations, recipe suggestions, and a shopping list generator based on user preferences and dietary needs.`),
       image: `${process.env.PUBLIC_URL}/assets/images/daily-app.webp`,
       tags: ['Swift', 'Node.js/Express', 'MongoDB', 'Docker & Kubernetes'],
 
