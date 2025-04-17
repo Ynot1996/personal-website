@@ -34,6 +34,13 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Tic Tac Toe',
+      description: truncateDescription(`A futuristic space-themed version of the classic Tic Tac Toe game! Play this game in a visually stunning environment inspired by the sci-fi aesthetics of the Halo universe.`),
+      image: `${process.env.PUBLIC_URL}/assets/images/tic_tac_toe.png`,
+      tags: ['Game', 'HTML5 & CSS', 'JavaScript'],
+      link: 'https://ynot1996.github.io/ooxx/',
+    },
+    {
       title: 'Stock Prediction Model',
       description: truncateDescription(`Stock analysis model using LSTM for time series forecasting to predict stock price movements.
       I was responsible for front-end (HTML, CSS, JavaScript) and back-end (Flask) development, deploying the application on AWS EC2.`),
