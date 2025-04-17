@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://ynot1996.github.io/personal-website",
   "dependencies": {
+    "express": "^5.1.0",
     "jest": "^29.7.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
