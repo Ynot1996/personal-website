@@ -34,6 +34,13 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'MyPocket',
+      description: truncateDescription(`A comprehensive personal finance management system to help you track expenses, set saving goals, and gain insights into your spending habits.`),
+      image: `${process.env.PUBLIC_URL}/assets/images/my_pocket.png`,
+      tags: ['.NET', 'GCP', 'Docker'],
+      link: 'https://mypocket-cd-302126295113.asia-east1.run.app/',
+    },
+    {
       title: 'Tic Tac Toe',
       description: truncateDescription(`A futuristic space-themed version of the classic Tic Tac Toe game! Play this game in a visually stunning environment inspired by the sci-fi aesthetics of the Halo universe.`),
       image: `${process.env.PUBLIC_URL}/assets/images/tic_tac_toe.png`,
@@ -60,12 +67,6 @@ const Projects = () => {
       image: `${process.env.PUBLIC_URL}/assets/images/daily-app.webp`,
       tags: ['Swift', 'Node.js/Express', 'MongoDB', 'Docker & Kubernetes'],
 
-    },
-    {
-      title: 'Coming Soon...',
-      description: ``,
-      image: `${process.env.PUBLIC_URL}/assets/images/coming-soon.jpg`,
-      tags: ['', '', ''],
     },
     {
       title: 'Coming Soon...',
